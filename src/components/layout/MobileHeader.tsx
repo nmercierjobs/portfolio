@@ -20,7 +20,7 @@ const MobileHeader = () => {
       <header className="fixed left-0 right-0 top-0 z-50 flex items-center justify-between bg-background px-6 py-5 lg:hidden">
         <NavLink to="/" className="block">
           <h1 className="font-display text-3xl font-medium tracking-tight text-foreground">
-            Émile
+            Noah Mercier
           </h1>
           <p className="text-xs text-muted-foreground">
             Visual Artist
@@ -135,7 +135,6 @@ const MobileHeader = () => {
               transitionTimingFunction: "cubic-bezier(0.16, 1, 0.3, 1)"
             }}
           >
-            © 1994 – 2025 Émile Laurent
           </p>
         </nav>
       </div>

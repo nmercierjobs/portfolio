@@ -25,7 +25,7 @@ const Sidebar = () => {
       >
         <NavLink to="/" className="block w-fit">
           <h1 className="font-display text-5xl font-medium tracking-tight text-foreground lg:text-6xl">
-            Émile
+            Noah Mercier
           </h1>
           <p className="mt-1 text-sm text-muted-foreground">
             Visual Artist
@@ -105,7 +105,6 @@ const Sidebar = () => {
           animationDelay: "400ms"
         }}
       >
-        © 1994 – 2025 Émile Laurent
       </p>
     </aside>
   );
