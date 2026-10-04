@@ -59,7 +59,7 @@ const About = () => {
             </div>
 
             {/* Divider */}
-            <div className="mb-6 h-px w-full bg-border" />
+            <div className="mb-6 h-px w-full border-b border-foreground/60" />
 
             {/* Bio Text */}
             <div className="space-y-5 leading-relaxed text-foreground font-[Arial] text-[15px]">
