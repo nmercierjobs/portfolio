@@ -13,7 +13,7 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="fixed left-0 top-0 z-50 flex h-screen w-64 flex-col bg-background px-8 py-10 lg:w-82">
+    <aside className="fixed left-0 top-0 z-50 flex h-screen w-[296px] flex-col bg-background px-8 py-10">
       {/* Logo / Artist Name */}
       <div 
         className="mb-16"
