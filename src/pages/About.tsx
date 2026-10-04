@@ -58,7 +58,7 @@ const About = () => {
                 Jack of All Trades Engineer
               </p>
               <div className="mt-1 text-[15.25px] leading-relaxed text-muted-foreground font-[Arial]">
-                <p>Davis, CA · Open to opportunities anywhere in California</p>
+                <p>Davis, CA • Open to opportunities anywhere in California</p>
               </div>
             </div>
 

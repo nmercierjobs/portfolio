@@ -13,7 +13,7 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="fixed left-0 top-0 z-50 flex h-screen w-64 flex-col bg-background px-8 py-10 lg:w-72">
+    <aside className="fixed left-0 top-0 z-50 flex h-screen w-64 flex-col bg-background px-8 py-10 lg:w-82">
       {/* Logo / Artist Name */}
       <div 
         className="mb-16"
@@ -27,9 +27,13 @@ const Sidebar = () => {
           <h1 className="font-display text-5xl font-medium tracking-tight text-foreground lg:text-6xl">
             Noah Mercier
           </h1>
-          <p className="mt-1 text-sm text-muted-foreground">
+          <p className="mt-1 text-muted-foreground text-[14px]">
             Jack of All Trades Engineer
           </p>
+          <p className="mt-1 text-muted-foreground text-[14px]">
+            Mechanical • Electrical • Software
+          </p>
+          
         </NavLink>
       </div>
 
