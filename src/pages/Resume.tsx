@@ -5,6 +5,10 @@ import Layout from "@/components/layout/Layout";
 // and every block inherits it.
 const RESUME_FONT_SIZE_PX = 13.25;
 
+// Change the résumé's zoom here. It scales around the column's center, so the
+// horizontal position is unaffected.
+const RESUME_SCALE = 1.2;
+
 const projects = [
   {
     title: "3D Camera Height Sensor",
@@ -58,8 +62,13 @@ const Resume = () => {
       <Layout>
         <main className="page-transition px-6 py-10 lg:px-10 lg:py-12">
           <article
-            className="mx-auto max-w-4xl -translate-x-[70px] origin-top scale-[1.2] font-[arial]"
-            style={{ fontSize: `${RESUME_FONT_SIZE_PX}px` }}
+            className="mx-auto max-w-4xl origin-top font-[arial]"
+            style={{
+              fontSize: `${RESUME_FONT_SIZE_PX}px`,
+              // The nudge shares --content-center-offset-x with the About page
+              // (.resume-axis) so both columns stay centered on one axis.
+              transform: `translateX(calc(var(--content-center-offset-x) * -1)) scale(${RESUME_SCALE})`,
+            }}
           >
 
             <address className="mt-4 not-italic leading-6 text-muted-foreground sm:mt-0 sm:text-right">

@@ -38,7 +38,8 @@ const About = () => {
       </Helmet>
 
       <Layout>
-        <div className="page-transition px-6 py-10 lg:px-10 lg:py-12">
+        {/* .resume-axis lines this column up with the résumé column's center */}
+        <div className="page-transition resume-axis px-6 py-10 lg:pl-10 lg:py-12">
           {/* Bio Content */}
           <div
             className="mx-auto flex w-full max-w-[800px] flex-col justify-start"
