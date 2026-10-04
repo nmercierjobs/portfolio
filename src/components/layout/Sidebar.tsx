@@ -50,21 +50,21 @@ const Sidebar = () => {
           to="/"
           end
           className="btn-pill-outline w-fit"
-          activeClassName="!bg-secondary !text-foreground"
+          activeClassName="!bg-muted !text-foreground"
         >
           Projects
         </NavLink>
         <NavLink
           to="/about"
           className="btn-pill-outline w-fit"
-          activeClassName="!bg-secondary !text-foreground"
+          activeClassName="!bg-muted !text-foreground"
         >
           About
         </NavLink>
         <NavLink
           to="/resume"
           className="btn-pill-outline w-fit"
-          activeClassName="!bg-secondary !text-foreground"
+          activeClassName="!bg-muted !text-foreground"
         >
           Resume
         </NavLink>
