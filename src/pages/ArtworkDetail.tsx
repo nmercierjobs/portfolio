@@ -231,7 +231,7 @@ const ArtworkDetail = () => {
                 {artwork.title}
               </h1>
 
-              <div className="mt-10 space-y-10 text-base leading-relaxed text-foreground lg:text-lg lg:leading-loose">
+              <div className="mt-10 space-y-10 project-body text-foreground">
                 {sections.map(({ key, label }) => (
                   <section key={key} id={key}>
                     {key !== "summary" && (

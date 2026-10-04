@@ -136,6 +136,20 @@
     color: hsl(var(--foreground) / 0.95);
   }
 
+  /* Project page body text - one place to tune font size on all project pages */
+  .project-body {
+    font-size: 13px;
+    line-height: 1.625;
+  }
+
+  @media (min-width: 1024px) {
+    .project-body {
+      font-size: 14.75px;
+      line-height: 2;
+    }
+  }
+
+
 
   /* Pill button style - simple and clean */
   .btn-pill {
