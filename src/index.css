@@ -50,6 +50,10 @@
     --font-display: 'Clash Grotesk', sans-serif;
     --font-body: 'Satoshi', sans-serif;
 
+    /* How far left of center the résumé column sits. Pages that should line
+       their centered text up with the résumé use this same value. */
+    --content-center-offset-x: 70px;
+
     /* Animation curves */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -135,6 +139,20 @@
     font-size: 14.5px;
     color: hsl(var(--foreground) / 0.95);
   }
+
+  /* Project page body text - one place to tune font size on all project pages */
+  .project-body {
+    font-size: 13px;
+    line-height: 1.625;
+  }
+
+  @media (min-width: 1024px) {
+    .project-body {
+      font-size: 14.75px;
+      line-height: 2;
+    }
+  }
+
 
 
   /* Pill button style - simple and clean */
@@ -315,6 +333,16 @@
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Pulls a page's centered column onto the résumé column's axis. The column
+     centers inside the space left over, so growing the right padding by twice
+     the offset moves that center left by one offset — and narrows the column
+     instead of sliding it under the sidebar on narrower desktop widths. */
+  @media (min-width: 1024px) {
+    .resume-axis {
+      padding-right: calc(2.5rem + var(--content-center-offset-x) * 2);
+    }
   }
 
   /* Animation delay utilities */

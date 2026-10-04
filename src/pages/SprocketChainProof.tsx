@@ -86,7 +86,7 @@ const SprocketChainProof = () => {
               Sprocket and Chain Approach to Gain
             </h1>
 
-            <div className="mt-10 space-y-8 text-base leading-relaxed text-foreground lg:text-lg lg:leading-loose">
+            <div className="mt-10 space-y-8 project-body text-foreground">
               <section>
                 <p>
                   My mechanical approach to continuously variable steering gain is to translate a steering arc into a rotation. At stage 1, sprocket A is fixed in place on the head tube to cause the planet sprocket to rotate when the handlebars are turned. This rotation is then transferred to the sun sprocket on the head tube where it can be used to drive the wheel. Varying the distance x to the planet will increase the arc length it rotates through, altering the output rotation. For simplicity, the diagram below does not include the chain tensioner needed to vary the distance.
