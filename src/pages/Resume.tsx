@@ -3,7 +3,7 @@ import Layout from "@/components/layout/Layout";
 
 // Change the résumé's text size here (in px). It is applied to the whole page
 // and every block inherits it.
-const RESUME_FONT_SIZE_PX = 13.25;
+const RESUME_FONT_SIZE_PX = 14.25;
 
 const projects = [
   {
@@ -58,7 +58,7 @@ const Resume = () => {
       <Layout>
         <main className="page-transition px-6 py-10 lg:px-10 lg:py-12">
           <article
-            className="mx-auto max-w-4xl -translate-x-[70px] origin-top scale-[1.2] font-[arial]"
+            className="mx-auto max-w-4xl -translate-x-[70px] origin-top font-[arial]"
             style={{ fontSize: `${RESUME_FONT_SIZE_PX}px` }}
           >
 
