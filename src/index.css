@@ -142,13 +142,13 @@
 
   /* Project page body text - one place to tune font size on all project pages */
   .project-body {
-    font-size: 13px;
+    font-size: 13.5px;
     line-height: 1.625;
   }
 
   @media (min-width: 1024px) {
     .project-body {
-      font-size: 14.75px;
+      font-size: 15.25px;
       line-height: 2;
     }
   }
