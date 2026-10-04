@@ -343,6 +343,12 @@
     .resume-axis {
       padding-right: calc(2.5rem + var(--content-center-offset-x) * 2);
     }
+
+    /* The résumé column's horizontal nudge — desktop only, since the offset
+       exists to clear the sidebar, which is hidden below lg. */
+    .resume-nudge {
+      transform: translateX(calc(var(--content-center-offset-x) * -1));
+    }
   }
 
   /* Animation delay utilities */
