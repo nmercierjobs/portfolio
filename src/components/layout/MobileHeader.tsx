@@ -123,9 +123,9 @@ const MobileHeader = () => {
             </NavLink>
           </div>
 
-          {/* Centered between the last pill and the bottom edge on tablet+ */}
+          {/* Centered between the last pill and the bottom edge on phones and tablets */}
           <div
-            className={`flex flex-col items-center gap-6 md:absolute md:inset-x-0 md:bottom-0 md:top-[var(--below-menu-top)] md:justify-center`}
+            className="absolute inset-x-0 bottom-0 top-[var(--below-menu-top)] flex flex-col items-center justify-center gap-6"
           >
             <button
               onClick={() => {
