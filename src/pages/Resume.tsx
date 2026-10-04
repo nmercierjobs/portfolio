@@ -3,11 +3,11 @@ import Layout from "@/components/layout/Layout";
 
 // Change the résumé's text size here (in px). It is applied to the whole page
 // and every block inherits it.
-const RESUME_FONT_SIZE_PX = 14.25;
+const RESUME_FONT_SIZE_PX = 15.25;
 
 // Change the résumé's zoom here. It scales around the column's center, so the
 // horizontal position is unaffected.
-const RESUME_SCALE = 1.2;
+const RESUME_SCALE = 1;
 
 const projects = [
   {

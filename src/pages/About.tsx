@@ -54,10 +54,10 @@ const About = () => {
               <h1 className="font-display text-3xl font-medium tracking-tight text-foreground lg:text-4xl">
                 Hello, I'm Noah
               </h1>
-              <p className="mt-1 text-[15px] text-muted-foreground">
+              <p className="mt-1 text-[15.25px] text-muted-foreground">
                 Jack of All Trades Engineer
               </p>
-              <div className="mt-1 text-[15px] leading-relaxed text-foreground text-muted-foreground">
+              <div className="mt-1 text-[15.25px] leading-relaxed text-muted-foreground font-[Arial]">
                 <p>Davis, CA · Open to opportunities anywhere in California</p>
               </div>
             </div>
@@ -66,7 +66,7 @@ const About = () => {
             <div className="mb-6 h-px w-full border-b border-foreground/60" />
 
             {/* Bio Text */}
-            <div className="space-y-5 leading-relaxed text-foreground font-[Arial] text-[15px]">
+            <div className="space-y-5 leading-relaxed text-foreground font-[Arial] text-[15.25px]">
               <p>
                 Growing up, I have always built things with varying degrees of success. My early failures were caused by a lack of understanding of the underlying theory, so I chose to become an engineer to gain the ability to turn my ideas into successful creations. In that same spirit, I am drawn to the core engineering disciplines (mechanical, electrical, and software) so that I can recognize and execute the most effective approach to bringing my inventions to life.
               </p>
@@ -77,7 +77,7 @@ const About = () => {
                 I love finding the best solution to a difficult problem. To me, that means copious research, hand calculations, and prototyping. I use all the resources at my disposal — textbooks, scientific articles, online courses, forums, datasheets, regulatory documentation, and whitepapers — to understand the problem and the approaches commonly used to solve it. I then dissect those approaches to understand why they are favored for their respective use cases, gauge their applicability to my problem, and determine what, if any, modifications may be necessary. Understanding math is fundamental to this process as it allows me to better understand my research, assess feasibility, and validate results. But no amount of research or calculations can substitute for prototyping’s ability to reveal complications. Where this approach really shines is when complications inevitably arise. I have the knowledge to quickly diagnose the issue, the analytical skills to develop a solution, and the hands-on experience to bring it to life.
               </p>
               <p>
-                I am fascinated by weaving core principles into innovative solutions. Particularly, but not exclusively, when combining mechanical, electrical, and software engineering. Leveraging multiple disciplines lends a diverse perspective and often yields a better solution. I am also drawn to the diversity of the problems, challenges, and the oppurtunity to apply my knowledge to the fullest extent. With this in mind, I now have my eye on startups anywhere in California with a particular interest in motion control, test engineering, R&D, and more.
+                My favorite solutions weave core principles into innovative solutions. Particularly, but not exclusively, when combining mechanical, electrical, and software engineering. Leveraging multiple disciplines lends a diverse perspective and often yields a better solution. I am also drawn to the diversity of the problems, challenges, and the oppurtunity to apply my knowledge to the fullest extent. With this in mind, I now have my eye on startups anywhere in California with a particular interest in motion control, test engineering, R&D, and more.
               </p>
             </div>
           </div>
