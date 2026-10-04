@@ -89,6 +89,20 @@ const About = () => {
                 </p>
               </div>
 
+              {/* Subtitle Textbox */}
+              <div
+                className="mb-6 leading-relaxed text-foreground font-[Arial] text-[15px]"
+                style={{
+                  opacity: 0,
+                  animation: "staggerFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+                  animationDelay: "75ms"
+                }}
+              >
+                <p>
+                  TODO
+                </p>
+              </div>
+
               {/* Divider */}
               <div className="mb-6 h-px w-full bg-border" />
 
