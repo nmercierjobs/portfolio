@@ -18,7 +18,7 @@ const Layout = ({ children }: LayoutProps) => {
       <MobileHeader />
 
       {/* Main Content */}
-      <main className="min-h-screen pt-20 lg:ml-[280px] lg:pt-0">
+      <main className="min-h-screen pt-20 lg:ml-[296px] lg:pt-0">
         {children}
       </main>
     </div>
