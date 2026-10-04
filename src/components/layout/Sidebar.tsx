@@ -27,10 +27,10 @@ const Sidebar = () => {
           <h1 className="font-display text-5xl font-medium tracking-tight text-foreground lg:text-6xl">
             Noah Mercier
           </h1>
-          <p className="mt-1 text-muted-foreground text-[14px]">
+          <p className="mt-1 text-muted-foreground text-[14.5px]">
             Jack of All Trades Engineer
           </p>
-          <p className="mt-1 text-muted-foreground text-[14px]">
+          <p className="mt-1 text-muted-foreground text-[14.5px]">
             Mechanical • Electrical • Software
           </p>
           
