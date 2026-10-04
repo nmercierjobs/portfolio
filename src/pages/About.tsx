@@ -56,6 +56,9 @@ const About = () => {
               <p className="mt-1 text-[15px] text-muted-foreground">
                 Jack of All Trades Engineer
               </p>
+              <div className="mt-5 text-[15px] leading-relaxed text-foreground font-[Arial]">
+                <p>TODO</p>
+              </div>
             </div>
 
             {/* Divider */}
