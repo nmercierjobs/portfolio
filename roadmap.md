@@ -5,4 +5,3 @@
 - [x] Tablet menu: Email + LinkedIn centered between Resume and the bottom edge
 - [x] Selected tab slightly darker than the others
 - [x] Phone menu: Email + LinkedIn centered between Resume and the bottom edge
-- [x] Project detail main images use uncropped 4:3 frames
