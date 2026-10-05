@@ -208,7 +208,10 @@ const ArtworkDetail = () => {
                 animationDelay: "0ms"
               }}
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-card">
+              <div
+                className="relative overflow-hidden rounded-2xl bg-card"
+                style={{ aspectRatio: artwork.heroAspectRatio ?? "4 / 3" }}
+              >
                 <ImageReveal
                   src={artwork.detailImage}
                   alt={artwork.title}
