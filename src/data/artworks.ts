@@ -4,6 +4,7 @@ import cameraNormalEstimation from "/images/3d_camera/summed_area_table.png";
 import cameraNormalField from "/images/3d_camera/covariance_matrix_stylized.png";
 import cameraFilteredCloud from "/images/3d_camera/kurvature.png";
 import cameraNormalFilter from "/images/3d_camera/projected_height.png";
+import postProcessingFilterExample from "/images/3d_camera/post_processing.png";
 
 import bicycleMechanicalOverview from "/images/reverse_bike/bike_cad.png";
 import bicycleSoftwareTuning from "/images/reverse_bike/least_squares_matrix.png";
@@ -16,14 +17,11 @@ import bicycleElectricalSystem from "/images/reverse_bike/UI.png";
 import usbTorqueSensorAssembly from "/images/torque_adapter/decoded_stylized.png";
 import usbTorqueSensorValidation from "/images/torque_adapter/COM0_waveform.png";
 import usbTorqueResultsPlaceholder from "/images/torque_adapter/bill_of_materials.png";
+import torqueSegments from "/images/torque_adapter/circuits.jpg";
 
 import wirelessHowItWorks1 from "/images/time_sync/tx_final.png";
 import wirelessHowItWorks2 from "/images/time_sync/mcu_sync_simplified.png";
-
-import torqueSegments from "@/assets/torque-segments.jpg";
-import wirelessAccuracyPlaceholder from "@/assets/wireless-accuracy-placeholder.png";
-import postProcessingFilterExample from "@/assets/post-processing-filter-example.png";
-
+import wirelessAccuracyPlaceholder from "/images/time_sync/accuracy.png";
 
 export interface Approach {
   title: string;
@@ -288,7 +286,7 @@ export const artworks: Artwork[] = [
           { 
             title: "Post-Processing Filters",
             text: "The RealSense API exposes a number of filters that can be applied to the point cloud. The spatial and decimation filters were particularly useful. The spatial filter applies an exponential moving average to the entire point cloud while preserving edges. A modest hit to performance, but it is worth the depth noise attenuation. On the other hand, decimation averages the depth values in a 2x2 to 8x8 region to reduce the overall number of points.",
-            imageBeforeAdditionalParagraphs: { src: postProcessingFilterExample, width: 600, height: 500, alt: "Point cloud example without (left) and with (right) spatial filter and decimation", displayWidthPercent: 60 },
+            imageBeforeAdditionalParagraphs: { src: postProcessingFilterExample, width: 1499, height: 463, alt: "Point cloud example without (left) and with (right) spatial filter and decimation", displayWidthPercent: 100 },
             additionalParagraphs: ["Decimation was critical to achieving the 90 Hz requirement, but implementing it was not straightforward. Because the number of points within the ROI varies with distance, a decimation factor that is appropriate at the minimum distance becomes excessive at the maximum distance. To overcome this, I apply the decimation dynamically where the greatest decimation occurs at the minimum distance and progressively reduce it until no decimation is needed at the maximum distance."],
           },
           { 
@@ -485,7 +483,7 @@ export const artworks: Artwork[] = [
     id: "3",
     title: "USB Torque Sensor",
     slug: "usb-torque-sensor",
-    image: "https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=800&q=80",
+    image: "/images/torque_adapter/main.gif",
     detailImage: `${import.meta.env.BASE_URL}artworks/fragments-of-silence.jpg`,
     detailImageWidthPercent: 100,
     summary: "Being able to measure torque is useful because, with some additional information and a bit of math, you can determine how much energy is required to turn something. However, quality torque sensors that can connect to a computer — also called rotary load cells — are very expensive, so I built my own. Using an inexpensive torque adapter, I added computer connectivity by decoding its 7-segment LCD display with a microcontroller and custom circuitry.",
@@ -553,10 +551,10 @@ export const artworks: Artwork[] = [
           ],
           endImage: {
             src: torqueSegments,
-            width: 500,
-            height: 500,
+            width: 3024,
+            height: 3197,
             alt: "Custom circuit to measure each segment in the 7-segment display",
-            displayWidthPercent: 40,
+            displayWidthPercent: 60,
           },
         },
         {
@@ -602,7 +600,7 @@ export const artworks: Artwork[] = [
     id: "4",
     title: "Wireless MCU Timer Synchronization",
     slug: "wireless-mcu-timer-synchronization",
-    image: "https://images.unsplash.com/photo-1549289524-06cf8837ace5?w=800&q=80",
+    image: "/images/time_sync/sync_gif.gif",
     detailImage: `${import.meta.env.BASE_URL}artworks/paris-layers.jpg`,
     detailImageWidthPercent: 100,
     summary: "Wireless communication is unreliable. Typical radio frequencies such as 2.4 GHz are shared by many devices, making them susceptible to interference. Frequency hopping can be used to improve reliability by periodically changing the transmission frequency. However, effective implementation requires both communicating devices to be synchronized so they can switch to the same frequency at the right time. Matching timers with wireless communication is tricky because any variability in sending or receiving timestamps leads to very poor accuracy. By capturing timestamps at the very end of the transmission process and the very beginning of the reception process, I minimized this variability and achieved an accuracy of 250 nanoseconds.",
@@ -661,10 +659,10 @@ export const artworks: Artwork[] = [
     results: "The final result was an accuracy of 250 ± 21 ns. Exceeding the 1 μs requirement provides the opportunity to further extend the time between correction events. Corrections have currently been tested at 10-minute intervals, with accuracy declining to only 350 ns. Based on these results, maintaining the 1 μs requirement with hourly corrections appears very achievable. Automatic synchronization was also successful, regardless of the power-up order of the devices. In retrospect, was the approach successful? Yes and no. All requirements were exceeded, but implementing the peripheral management and low-level radio control was very time-consuming. In my case, I greatly value what I have learned about the nRF52 hardware and would not change anything. Practically, the RBS protocol should be able to achieve the same results with a fraction of the effort.",
     resultsImage: {
       src: wirelessAccuracyPlaceholder,
-      width: 600,
-      height: 500,
+      width: 484,
+      height: 453,
       alt: "Measured time synchronization accuracy with logic analyzer",
-      displayWidthPercent: 60,
+      displayWidthPercent: 50,
     },
   },
 ];
