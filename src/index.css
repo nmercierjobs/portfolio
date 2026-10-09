@@ -54,6 +54,10 @@
        their centered text up with the résumé use this same value. */
     --content-center-offset-x: 70px;
 
+    /* Space between a project's main photo and the first header below it. */
+    --photo-to-header-gap: 24px;
+
+
     /* Animation curves */
     --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
     --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
@@ -334,6 +338,13 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Gap under a project's main photo, above the first header. Tuned with
+     --photo-to-header-gap so every project page changes from one value. */
+  .photo-to-header-gap {
+    padding-top: var(--photo-to-header-gap);
+  }
+
 
   /* Pulls a page's centered column onto the résumé column's axis. The column
      centers inside the space left over, so growing the right padding by twice

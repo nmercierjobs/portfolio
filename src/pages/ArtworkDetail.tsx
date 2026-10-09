@@ -222,7 +222,7 @@ const ArtworkDetail = () => {
           </div>
 
           {/* Content Section - Full page width */}
-          <div className="border-x-2 border-border mx-auto max-w-6xl flex-1 px-6 py-12 lg:px-10 lg:py-24 font-[Arial]">
+          <div className="border-x-2 border-border photo-to-header-gap mx-auto max-w-6xl flex-1 px-6 pb-12 lg:px-10 lg:pb-24 font-[Arial]">
             <div
               style={{
                 opacity: 0,
@@ -234,7 +234,7 @@ const ArtworkDetail = () => {
                 {artwork.title}
               </h1>
 
-              <div className="mt-10 space-y-10 project-body text-foreground">
+              <div className="mt-6 space-y-10 project-body text-foreground">
                 {sections.map(({ key, label }) => (
                   <section key={key} id={key}>
                     {key !== "summary" && (
@@ -251,7 +251,7 @@ const ArtworkDetail = () => {
                       </h2>
                     )}
                     {key === "summary" ? (
-                      <div className="mt-4">
+                      <div className="mt-2">
                         {/* Supporting Image - Half page width, floated within the text */}
                         {artwork.supportImage && (
                         <figure

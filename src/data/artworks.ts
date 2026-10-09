@@ -312,7 +312,7 @@ export const artworks: Artwork[] = [
     slug: "steer-by-wire-bicycle",
     image: "/images/reverse_black.gif",
     detailImage: `${import.meta.env.BASE_URL}images/reverse_bike/reverse_bike_main.png`,
-    detailImageWidthPercent: 85,
+    detailImageWidthPercent: 70,
     heroAspectRatio: "1279/879",
     summary: "When a deeply ingrained activity is changed slightly, how easily can the brain adjust? To explore this, I modified an iconic example of muscle memory: the bicycle. At its core, riding a bike is all about balance, and that balance comes from steering. Steering can be changed in just two ways: the direction you turn and the amount you turn. To vary these, I opted to control the steering with a motor because of its cost-effectiveness and ability to allow quick configuration. The system was highly effective, providing reverse steering and steering gains from 1 to 2 in 0.1 increments, with all combinations selectable and quickly configurable. In the end, both others and I failed miserably to adapt to the reverse steering. More interestingly, high steering gain was quickly adapted to by everyone, but the initial responses were highly variable. For some, it felt extremely natural, while others reacted with wild overshooting and overcorrection.",
     problem: "How to make a bicycle wheel move twice as much as the handlebars and in the opposite direction?",
