@@ -210,11 +210,13 @@
     box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.12);
   }
 
-  .artwork-card img {
+  .artwork-card img,
+  .artwork-card video {
     transition: transform 0.8s var(--ease-out-expo);
   }
 
-  .artwork-card:hover img {
+  .artwork-card:hover img,
+  .artwork-card:hover video {
     transform: scale(1.06);
   }
 

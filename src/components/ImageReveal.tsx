@@ -50,6 +50,8 @@ const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
           loop
           playsInline
           preload="metadata"
+          disablePictureInPicture
+          disableRemotePlayback
           onLoadedData={() => setIsLoaded(true)}
         />
       ) : (
