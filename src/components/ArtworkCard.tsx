@@ -18,7 +18,12 @@ const ArtworkCard = ({ artwork, index }: ArtworkCardProps) => {
         animationDelay: `${index * 100}ms`,
       }}
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
+      <div
+        className="relative overflow-hidden"
+        style={{
+          aspectRatio: `${artwork.thumbnailWidth ?? 4}/${artwork.thumbnailHeight ?? 3}`,
+        }}
+      >
         <ImageReveal
           src={artwork.image}
           alt={artwork.title}

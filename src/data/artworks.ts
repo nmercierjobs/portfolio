@@ -129,6 +129,9 @@ export interface Artwork {
   title: string;
   slug: string;
   image: string;
+  /** Front-page thumbnail frame dimensions in px; defaults to 4x3. Change per project to resize that card's image box. */
+  thumbnailWidth?: number;
+  thumbnailHeight?: number;
   detailImage: string;
   detailImageWidthPercent: number;
   heroAspectRatio?: string;
