@@ -210,7 +210,12 @@ const ArtworkDetail = () => {
             >
               <div
                 className="relative overflow-hidden rounded-2xl bg-card"
-                style={{ aspectRatio: artwork.heroAspectRatio ?? "4 / 3" }}
+                style={{
+                  aspectRatio:
+                    artwork.detailImageWidth && artwork.detailImageHeight
+                      ? `${artwork.detailImageWidth} / ${artwork.detailImageHeight}`
+                      : artwork.heroAspectRatio ?? "4 / 3",
+                }}
               >
                 <ImageReveal
                   src={artwork.detailImage}
