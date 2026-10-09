@@ -339,6 +339,13 @@
     text-wrap: balance;
   }
 
+  /* Gap under a project's main photo, above the first header. Tuned with
+     --photo-to-header-gap so every project page changes from one value. */
+  .photo-to-header-gap {
+    padding-top: var(--photo-to-header-gap);
+  }
+
+
   /* Pulls a page's centered column onto the résumé column's axis. The column
      centers inside the space left over, so growing the right padding by twice
      the offset moves that center left by one offset — and narrows the column
