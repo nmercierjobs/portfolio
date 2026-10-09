@@ -222,7 +222,7 @@ const ArtworkDetail = () => {
           </div>
 
           {/* Content Section - Full page width */}
-          <div className="border-x-2 border-border mx-auto max-w-6xl flex-1 px-6 py-12 lg:px-10 lg:py-24 font-[Arial]">
+          <div className="border-x-2 border-border photo-to-header-gap mx-auto max-w-6xl flex-1 px-6 pb-12 lg:px-10 lg:pb-24 font-[Arial]">
             <div
               style={{
                 opacity: 0,
