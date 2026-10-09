@@ -134,7 +134,7 @@ export interface Artwork {
   thumbnailHeight?: number;
   detailImage: string;
   detailImageWidthPercent: number;
-  /** Detail-page hero frame dimensions in px; set both to size that image box exactly. Falls back to heroAspectRatio, then 4x3. */
+  /** Detail-page hero frame dimensions in px; set both to give the frame its actual on-page size (media keeps its own ratio inside). Falls back to heroAspectRatio, then 4x3. */
   detailImageWidth?: number;
   detailImageHeight?: number;
   heroAspectRatio?: string;
