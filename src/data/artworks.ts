@@ -134,7 +134,7 @@ export interface Artwork {
   thumbnailHeight?: number;
   detailImage: string;
   detailImageWidthPercent: number;
-  /** Detail-page hero frame dimensions in px; set both to size that image box exactly. Falls back to heroAspectRatio, then 4x3. */
+  /** Detail-page hero frame dimensions in px; set both to give the frame its actual on-page size (media keeps its own ratio inside). Falls back to heroAspectRatio, then 4x3. */
   detailImageWidth?: number;
   detailImageHeight?: number;
   heroAspectRatio?: string;
@@ -495,8 +495,6 @@ export const artworks: Artwork[] = [
     title: "USB Torque Sensor",
     slug: "usb-torque-sensor",
     image: "/images/torque_adapter/torque_front_720x541p.webm",
-    thumbnailWidth: "720",
-    thumbnailHeight: "535",
     detailImage: `/images/torque_adapter/torque_front_720x541p.webm`,
     detailImageWidthPercent: 65,
     summary: "Being able to measure torque is useful because, with some additional information and a bit of math, you can determine how much energy is required to turn something. However, quality torque sensors that can connect to a computer — also called rotary load cells — are very expensive, so I built my own. Using an inexpensive torque adapter, I added computer connectivity by decoding its 7-segment LCD display with a microcontroller and custom circuitry.",
