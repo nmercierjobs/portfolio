@@ -164,7 +164,7 @@ export const artworks: Artwork[] = [
     title: "3D Camera Height Sensor",
     slug: "3d-camera-height-sensor",
     image: "/images/3d_camera/camera_front_720x541p.webm",
-    detailImage: `/images/3d_camera/camera_page_720p.webm`,
+    detailImage: `/images/3d_camera/camera_page_720x382p.webm`,
     thumbnailWidth: "720",
     thumbnailHeight: "535",
     detailImageWidthPercent: 90,
