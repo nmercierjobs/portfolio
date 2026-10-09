@@ -167,8 +167,6 @@ export const artworks: Artwork[] = [
     detailImage: `/images/3d_camera/camera_page_720p.webm`,
     detailImageWidthPercent: 90,
     heroAspectRatio: "1280/679",
-    detailImageWidth: 700,
-    detailImageHeight: 500,
     summary: "I built a novel sensor capable of measuring height and orientation above the ground in outdoor environments. Similar to how humans perceive depth, a 3D camera uses two different images to construct a model of its surroundings. I use one of these cameras to model the ground which can be used to calculate the sensor’s height and orientation. However, the camera cannot distinguish between the ground, rocks, twigs, and sticks. Using complex algebra, I break the model into small squares and analyze each one to determine whether it belongs to the ground. Removing these obstacles allowed me to achieve millimeter-level accuracy under real-world conditions. Through a variety of program optimizations, I was also able to achieve 90 measurements per second.",
     problem: "How to measure an object's height and orientation above a flat surface?",
     requirements: [
