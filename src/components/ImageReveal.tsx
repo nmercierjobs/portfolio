@@ -10,7 +10,8 @@ interface ImageRevealProps {
 const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
+  const mediaRef = useRef<HTMLImageElement | HTMLVideoElement>(null);
+  const isMp4 = /\.mp4(?:$|[?#])/i.test(src);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -23,8 +24,8 @@ const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
       { threshold: 0.1 }
     );
 
-    if (imgRef.current) {
-      observer.observe(imgRef.current);
+    if (mediaRef.current) {
+      observer.observe(mediaRef.current);
     }
 
     return () => observer.disconnect();
@@ -37,14 +38,30 @@ const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
         <div className="absolute inset-0 shimmer" />
       )}
       
-      <img
-        ref={imgRef}
-        src={isInView ? src : undefined}
-        alt={alt}
-        className={`img-reveal ${isLoaded ? 'loaded' : ''} ${className}`}
-        onLoad={() => setIsLoaded(true)}
-        loading="lazy"
-      />
+      {isMp4 ? (
+        <video
+          ref={mediaRef as React.RefObject<HTMLVideoElement>}
+          src={isInView ? src : undefined}
+          aria-label={alt}
+          className={`img-reveal ${isLoaded ? "loaded" : ""} ${className}`}
+          style={style}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          onLoadedData={() => setIsLoaded(true)}
+        />
+      ) : (
+        <img
+          ref={mediaRef as React.RefObject<HTMLImageElement>}
+          src={isInView ? src : undefined}
+          alt={alt}
+          className={`img-reveal ${isLoaded ? "loaded" : ""} ${className}`}
+          onLoad={() => setIsLoaded(true)}
+          loading="lazy"
+        />
+      )}
     </div>
   );
 };
