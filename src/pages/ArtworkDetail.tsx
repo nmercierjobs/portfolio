@@ -209,13 +209,18 @@ const ArtworkDetail = () => {
               }}
             >
               <div
-                className="relative overflow-hidden rounded-2xl bg-card"
-                style={{
-                  aspectRatio:
-                    artwork.detailImageWidth && artwork.detailImageHeight
-                      ? `${artwork.detailImageWidth} / ${artwork.detailImageHeight}`
-                      : artwork.heroAspectRatio ?? "4 / 3",
-                }}
+                className="relative max-w-full overflow-hidden rounded-2xl bg-card"
+                style={
+                  artwork.detailImageWidth && artwork.detailImageHeight
+                    ? {
+                        // Exact frame dimensions in px; the media itself keeps its
+                        // natural ratio inside (object-contain) and is never scaled
+                        // or cropped by these values. Shrinks only if wider than the page.
+                        width: `${artwork.detailImageWidth}px`,
+                        aspectRatio: `${artwork.detailImageWidth} / ${artwork.detailImageHeight}`,
+                      }
+                    : { aspectRatio: artwork.heroAspectRatio ?? "4 / 3" }
+                }
               >
                 <ImageReveal
                   src={artwork.detailImage}
