@@ -603,6 +603,7 @@ export const artworks: Artwork[] = [
     image: "/images/time_sync/sync_gif.gif",
     detailImage: `/images/time_sync/sync_gif.gif`,
     detailImageWidthPercent: 100,
+    heroAspectRatio: "16/9",
     summary: "Wireless communication is unreliable. Typical radio frequencies such as 2.4 GHz are shared by many devices, making them susceptible to interference. Frequency hopping can be used to improve reliability by periodically changing the transmission frequency. However, effective implementation requires both communicating devices to be synchronized so they can switch to the same frequency at the right time. Matching timers with wireless communication is tricky because any variability in sending or receiving timestamps leads to very poor accuracy. By capturing timestamps at the very end of the transmission process and the very beginning of the reception process, I minimized this variability and achieved an accuracy of 250 nanoseconds.",
     problem: "How to match the timers on three Nordic nRF52 series microcontrollers wirelessly?",
     requirements: [
