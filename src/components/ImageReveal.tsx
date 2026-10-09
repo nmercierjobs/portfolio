@@ -11,7 +11,7 @@ const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
   const mediaRef = useRef<HTMLImageElement | HTMLVideoElement>(null);
-  const isMp4 = /\.mp4(?:$|[?#])/i.test(src);
+  const isVideo = /\.(?:mp4|webm)(?:$|[?#])/i.test(src);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -38,7 +38,7 @@ const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
         <div className="absolute inset-0 shimmer" />
       )}
       
-      {isMp4 ? (
+      {isVideo ? (
         <video
           ref={mediaRef as React.RefObject<HTMLVideoElement>}
           src={isInView ? src : undefined}
