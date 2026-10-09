@@ -230,7 +230,7 @@ const ArtworkDetail = () => {
                 animationDelay: "200ms"
               }}
             >
-              <h1 className="font-display text-4xl font-medium tracking-tight text-foreground lg:text-5xl">
+              <h1 className="font-display text-4xl font-medium tracking-tight text-foreground lg:text-5xl py- mt-2">
                 {artwork.title}
               </h1>
 
