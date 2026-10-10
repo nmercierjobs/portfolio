@@ -226,6 +226,7 @@ const ArtworkDetail = () => {
                   src={artwork.detailImage}
                   alt={artwork.title}
                   className="h-full w-full object-contain"
+                  eager
                 />
               </div>
             </figure>
