@@ -10,7 +10,7 @@ const Work = () => {
         <title>Noah Mercier — Engineer</title>
         <meta
           name="description"
-          content="Explore the artworks of Émile Laurent, a Paris-based visual artist specializing in oil paintings and classical techniques."
+          content=""
         />
       </Helmet>
 

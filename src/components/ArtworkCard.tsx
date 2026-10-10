@@ -28,6 +28,7 @@ const ArtworkCard = ({ artwork, index }: ArtworkCardProps) => {
           src={artwork.image}
           alt={artwork.title}
           className="h-full w-full object-cover"
+          eager
         />
       </div>
       <div className="border-t border-border/60 bg-card p-3 sm:p-4">
