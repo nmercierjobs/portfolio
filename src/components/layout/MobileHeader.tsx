@@ -49,10 +49,10 @@ const MobileHeader = () => {
           <h1 className="font-display text-3xl font-medium tracking-tight text-foreground">
             Noah Mercier
           </h1>
-          <p className="text-xs text-muted-foreground">
+          <p className="header-tagline text-muted-foreground">
             Jack of All Trades Engineer
           </p>
-          <p className="text-xs text-muted-foreground">
+          <p className="header-tagline text-muted-foreground">
             Mechanical • Electrical • Software
           </p>
         </NavLink>

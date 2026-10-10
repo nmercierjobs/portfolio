@@ -144,6 +144,12 @@
     color: hsl(var(--foreground) / 0.95);
   }
 
+  /* Tagline lines under the name in the phone/tablet header - one place to
+     tune their size; the desktop sidebar keeps its own text-xs sizing. */
+  .header-tagline {
+    font-size: 11.5px;
+  }
+
   /* Project page body text - one place to tune font size on all project pages */
   .project-body {
     font-size: 14px;
