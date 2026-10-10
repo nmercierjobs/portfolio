@@ -222,12 +222,14 @@ const ArtworkDetail = () => {
                     : { aspectRatio: artwork.heroAspectRatio ?? "4 / 3" }
                 }
               >
-                <ImageReveal
-                  src={artwork.detailImage}
-                  alt={artwork.title}
-                  className="h-full w-full object-contain"
-                  eager
-                />
+                <div className="absolute inset-0">
+                  <ImageReveal
+                    src={artwork.detailImage}
+                    alt={artwork.title}
+                    className="h-full w-full object-contain"
+                    eager
+                  />
+                </div>
               </div>
             </figure>
           </div>
