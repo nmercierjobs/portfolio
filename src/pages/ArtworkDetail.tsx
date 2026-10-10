@@ -225,8 +225,8 @@ const ArtworkDetail = () => {
                 <ImageReveal
                   src={artwork.detailImage}
                   alt={artwork.title}
-                  className="h-full w-full object-contain"
-                  eager
+                  className="block w-full h-auto"
+                  // className="h-full w-full object-contain"
                 />
               </div>
             </figure>
