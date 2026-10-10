@@ -215,6 +215,13 @@
     transition: transform 0.8s var(--ease-out-expo);
   }
 
+  /* Hide the camera clip's single dark right-edge pixel inside its existing frame. */
+  .artwork-card video[src$="/camera_640x480p.webm"] {
+    width: calc(100% * 640 / 639);
+    max-width: none;
+    object-position: left center;
+  }
+
   .artwork-card:hover img,
   .artwork-card:hover video {
     transform: scale(1.06);
