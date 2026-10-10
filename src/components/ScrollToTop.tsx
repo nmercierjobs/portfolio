@@ -4,6 +4,12 @@ import { useLocation } from "react-router-dom";
 const ScrollToTop = () => {
   const { pathname } = useLocation();
 
+  // Stop the browser from restoring the previous scroll position on refresh,
+  // which otherwise leaves the page slightly scrolled after a reload.
+  if ("scrollRestoration" in window.history) {
+    window.history.scrollRestoration = "manual";
+  }
+
   useLayoutEffect(() => {
     const root = document.documentElement;
     const previousBehavior = root.style.scrollBehavior;
