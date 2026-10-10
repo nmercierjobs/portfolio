@@ -5,15 +5,19 @@ interface ImageRevealProps {
   alt: string;
   className?: string;
   style?: React.CSSProperties;
+  /** Load immediately instead of waiting until scrolled into view. */
+  eager?: boolean;
 }
 
-const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
+const ImageReveal = ({ src, alt, className = "", style, eager = false }: ImageRevealProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(eager);
   const mediaRef = useRef<HTMLImageElement | HTMLVideoElement>(null);
   const isVideo = /\.(?:mp4|webm)(?:$|[?#])/i.test(src);
 
   useEffect(() => {
+    if (eager) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -29,7 +33,7 @@ const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [eager]);
 
   return (
     <div className="relative h-full w-full overflow-hidden" style={style}>
@@ -61,7 +65,7 @@ const ImageReveal = ({ src, alt, className = "", style }: ImageRevealProps) => {
           alt={alt}
           className={`img-reveal ${isLoaded ? "loaded" : ""} ${className}`}
           onLoad={() => setIsLoaded(true)}
-          loading="lazy"
+          loading={eager ? "eager" : "lazy"}
         />
       )}
     </div>
