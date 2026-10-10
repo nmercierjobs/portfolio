@@ -33,7 +33,7 @@ const ImageReveal = ({ src, alt, className = "", style, eager = false }: ImageRe
     }
 
     return () => observer.disconnect();
-  }, []);
+  }, [eager]);
 
   return (
     <div className="relative h-full w-full overflow-hidden" style={style}>
@@ -65,7 +65,7 @@ const ImageReveal = ({ src, alt, className = "", style, eager = false }: ImageRe
           alt={alt}
           className={`img-reveal ${isLoaded ? "loaded" : ""} ${className}`}
           onLoad={() => setIsLoaded(true)}
-          loading="lazy"
+          loading={eager ? "eager" : "lazy"}
         />
       )}
     </div>
