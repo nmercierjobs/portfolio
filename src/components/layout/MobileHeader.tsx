@@ -52,6 +52,9 @@ const MobileHeader = () => {
           <p className="text-xs text-muted-foreground">
             Jack of All Trades Engineer
           </p>
+          <p className="text-xs text-muted-foreground">
+            Mechanical • Electrical • Software
+          </p>
         </NavLink>
 
         <button
