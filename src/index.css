@@ -217,7 +217,7 @@
 
   /* Hide the camera clip's single dark right-edge pixel inside its existing frame. */
   .artwork-card video[src$="/camera_640x480p.webm"] {
-    width: calc(100% * 640 / 639);
+    width: calc(100% + 2px);
     max-width: none;
     object-position: left center;
   }
